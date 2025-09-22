@@ -1,269 +1,394 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Stalin Kar — Senior SDET & Automation Engineer</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', 'Montserrat', sans-serif;
-      min-height: 100vh;
-      /* Attractive fixed background: soft blue gradient with geometric pattern overlay */
-      background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
-      position: relative;
-      overflow-x: hidden;
-    }
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      pointer-events: none;
-      z-index: -1;
-      opacity: 0.18;
-      background-image:
-        repeating-linear-gradient(135deg, #2563eb 0px, #2563eb 2px, transparent 2px, transparent 40px),
-        repeating-linear-gradient(45deg, #38bdf8 0px, #38bdf8 2px, transparent 2px, transparent 40px);
-    }
-    .glass {
-      background: rgba(255,255,255,0.25);
-      box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
-      backdrop-filter: blur(8px);
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.18);
-    }
-    .card {
-      transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-    .card:hover {
-      transform: translateY(-8px) scale(1.03);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.16);
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 50;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-      backdrop-filter: blur(4px);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background: rgba(255,255,255,0.95);
-      padding: 24px;
-      border-radius: 18px;
-      width: 90%;
-      max-width: 800px;
-      box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
-      border: 1px solid #e0e7ef;
-    }
-    blockquote {
-      font-style: italic;
-      color: #2563eb;
-      border-left: 4px solid #2563eb;
-      padding-left: 12px;
-      margin-bottom: 12px;
-      background: rgba(226,232,240,0.4);
-      border-radius: 8px;
-    }
-    h1, h2, h3 {
-      font-family: 'Montserrat', sans-serif;
-    }
-    /* Responsive tweaks */
-    @media (max-width: 768px) {
-      .flex.items-center.space-x-6.mt-6 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+  <meta charset="UTF-8">
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: 'Inter', 'Montserrat', sans-serif;
+        min-height: 100vh;
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+        background-attachment: fixed;
+      }
+      .glass {
+        background: rgba(255,255,255,0.25);
+        box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        border: 1px solid rgba(255,255,255,0.18);
+      }
+      .card {
+        transition: transform 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      }
+      .card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.16);
+      }
+      .sticky-nav {
+        position: sticky;
+        top: 0;
+        z-index: 40;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        transition: background 0.3s;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 50;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        backdrop-filter: blur(4px);
+        justify-content: center;
+        align-items: center;
       }
       .modal-content {
-        padding: 12px;
+        background: rgba(255,255,255,0.95);
+        padding: 24px;
+        border-radius: 18px;
+        width: 90%;
+        max-width: 800px;
+        box-shadow: 0px 8px 25px rgba(0,0,0,0.25);
+        border: 1px solid #e0e7ef;
       }
-    }
-  </style>
-</head>
-<body class="text-gray-800 font-sans">
+      blockquote {
+        font-style: italic;
+        color: #2563eb;
+        border-left: 4px solid #2563eb;
+        padding-left: 12px;
+        margin-bottom: 12px;
+        background: rgba(226,232,240,0.4);
+        border-radius: 8px;
+      }
+      h1, h2, h3 {
+        font-family: 'Montserrat', sans-serif;
+      }
+      .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1);
+      }
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Responsive tweaks */
+      @media (max-width: 768px) {
+        .flex.items-center.space-x-6.mt-6 {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+        .modal-content {
+          padding: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-gray-800 font-sans">
 
-  <!-- Top Bar with Icons -->
-  <div class="flex justify-between items-center space-x-6 p-4 glass text-white-700 shadow-md">
-<!-- <header class="flex justify-between items-center p-4 bg-gray-900 text-white shadow"></header> -->
-    <div>
-        <div class="flex items-center space-x-3">
-        <!-- Logo Circle -->
-            <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold text-lg shadow-lg">
+    <!-- Sticky Navbar -->
+    <nav class="sticky-nav flex justify-between items-center px-6 py-3">
+      <div class="flex items-center gap-3">
+        <!-- <img src="assets/picture/profile.jpg" alt="Profile" class="w-10 h-10 rounded-full border-2 border-blue-400 shadow">
+        <span class="font-bold text-lg text-blue-700 tracking-wide">Stalin Kar</span> -->
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold text-lg shadow-lg">
                 SK
             </div>
             <!-- Title Text -->
             <div>
-                <h3>Stalin Kar</h3>
-                <p class="text-sm text-blue-400">Senior SDET & Automation Engineer</p>
+                <span class="font-bold text-lg text-blue-700 tracking-wide">Stalin Kar</span>
+                <p class="text-sm text-blue-400">Senior SDET &amp; Automation Engineer</p>
             </div>
-        </div>
-    </div>
-    <div>
-        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:text-blue-500 transition-colors">
-        <i class="fab fa-linkedin fa-2x"></i>
-        </a>
-        <a href="https://github.com/stalinkar" target="_blank" class="hover:text-gray-900 transition-colors">
-        <i class="fab fa-github fa-2x"></i>
-        </a>
-        <a href="mailto:stalinkar93@gmail.com" class="hover:text-red-500 transition-colors">
-        <i class="fa fa-envelope fa-2x"></i>
-        </a>
-    </div>
-  </div>
-  
-  <div class="max-w-4xl mx-auto p-6">
-
-    <!-- Profile -->
-    <div class="flex items-center space-x-6 mt-6 glass p-6 shadow-lg">
-      <img src="assets/picture/profile.jpg" alt="Profile" class="w-32 h-32 rounded-full shadow-lg border-4 border-white object-cover">
-      <div>
-        <h1 class="text-3xl font-extrabold text-blue-700 mb-1">Stalin Kar</h1>
-        <p class="text-lg text-gray-700 font-semibold mb-2">Senior SDET | UI & API Automation Engineer | Selenium | Playwright | Postman | API Testing (Java | Python | Rest Assured) | Driving Quality & Automation Excellence 🚀</p>
-        <p class="text-sm text-gray-500 mb-2 flex items-center gap-2">
-          <i class="fa fa-map-marker" aria-hidden="true"></i> Bengaluru, India
-          <span>|</span>
-          <a href="mailto:stalinkar93@gmail.com" class="hover:text-blue-500 transition-colors flex items-center gap-1">
-            <i class="fa fa-envelope" aria-hidden="true"></i> stalinkar93@gmail.com
-          </a>
-        </p>
-        <div class="flex gap-4 mt-2">
-          <a href="https://www.linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:text-blue-500 transition-colors">
-            <i class="fab fa-linkedin fa-lg"></i>
-          </a>
-          <a href="https://github.com/stalinkar" target="_blank" class="hover:text-gray-900 transition-colors">
-            <i class="fab fa-github fa-lg"></i>
-          </a>
-        </div>
       </div>
-    </div>
-    
-    <div class="flex items-center space-x-6 mt-4 glass p-3 shadow-lg">
-        <blockquote>
-        "Behind every seamless user experience is a tester who saw the bug before you did. Software quality is not just about testing—it’s about trust, automation, and enabling speed without compromise."
-        </blockquote>
-    </div>
-
-    <!-- About -->
-    <section class="mt-10 glass p-6 shadow-lg">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-2">About Me</h2>
-      <p class="mt-1 text-gray-700 leading-relaxed">
-        👋Hey there! I’m <b>Stalin Kar</b>, a <b>Senior SDET</b> with nearly a decade of experience ensuring financial applications are not just functional—but flawless.<br>
-
-        💻 At Broadridge Financial Solutions, I design and build scalable automation frameworks using Selenium WebDriver, Playwright, Java, Python, and Rest Assured. I specialize in in-sprint automation, regression maintenance, and custom tool development, delivering measurable impact:<br>
-        ✅ 60% reduction in manual testing effort<br>
-        ✅ 40% improvement in post-release quality<br>
-        
-        🏦 My expertise spans fintech and insurance domains, where I’ve led QA for mission-critical applications like asset management systems and claims processing platforms. I thrive in Agile environments, mentoring junior testers, and acting as a bridge between Dev, QA, and business stakeholders to drive seamless delivery.<br>
-
-        🤝 What sets me apart? I don’t just test—I engineer solutions. From building custom VBA, Java, HTML, and JS utilities for test data management, to streamlining QA processes and improving code quality through Git reviews, I focus on efficiency, innovation, and collaboration.<br>
-
-        🎯 Career-wise, I’m growing toward a QA leadership role, where I can shape strategic automation initiatives and drive quality engineering excellence across global teams.<br>
-        </p>
-        <p>
-        💡 Outside of work, I’m a lifelong learner, always exploring new tools, frameworks, and practices to stay ahead in the evolving QA landscape.<br>
-
-        💬 Let’s connect if you’re passionate about delivering bug-free, high-quality software—or if you’re looking for an SDET who can transform your testing game.
-        </p>
-    </section>
-
-    <!-- Skills -->
-    <section class="mt-10 glass p-6 shadow-lg">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4">Skills & Experience</h2>
-      <ul class="space-y-3">
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>Selenium WebDriver</span><span class="text-gray-600">6 Years</span>
-        </li>
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>Playwright</span><span class="text-gray-600">3 Years</span>
-        </li>
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>Java</span><span class="text-gray-600">6 Years</span>
-        </li>
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>Python</span><span class="text-gray-600">4 Years</span>
-        </li>
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>JavaScript</span><span class="text-gray-600">3 Years</span>
-        </li>
-        <li class="flex justify-between items-center bg-white bg-opacity-70 p-3 rounded shadow">
-          <span>API Testing</span><span class="text-gray-600">4 Years</span>
-        </li>
+      <!-- <div>
+        <div class="flex items-center space-x-3">
+        Logo Circle -->
+            <!-- <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold text-lg shadow-lg">
+                SK
+            </div> -->
+            <!-- Title Text -->
+            <!-- <div>
+                <h3>Stalin Kar</h3>
+                <p class="text-sm text-blue-400">Senior SDET &amp; Automation Engineer</p>
+            </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
+      <ul class="flex gap-6 font-semibold text-gray-700 text-base">
+        <li><a href="#hero" class="hover:text-blue-600 transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-blue-600 transition-colors">About</a></li>
+        <li><a href="#services" class="hover:text-blue-600 transition-colors">Services</a></li>
+        <li><a href="#portfolio" class="hover:text-blue-600 transition-colors">Portfolio</a></li>
+        <li><a href="#testimonials" class="hover:text-blue-600 transition-colors">Testimonials</a></li>
+        <li><a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a></li>
       </ul>
-    </section>
+      <!-- <div class="flex items-center space-x-4">
+        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/stalinkar" target="_blank" class="hover:text-gray-900 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+        <a href="mailto:stalinkar93@gmail.com" class="hover:text-red-500 transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
+      </div> -->
+    </nav>
 
-    <!-- Education -->
-    <section class="mt-10 glass p-6 shadow-lg">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4">Education</h2>
-      <div class="bg-gradient-to-r from-blue-100 to-blue-50 p-4 rounded shadow">
-        <h3 class="font-semibold">Bachelor of Technology (B.Tech) in Electrical and Electronics Engineering (EEE)</h3>
-        <p class="text-gray-600">Biju Pattanaik University of Technology (BPUT)</p>
-        <p class="text-gray-500">CGPA: 7.35</p>
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-[80vh] flex flex-col justify-center items-center text-center px-4 pt-20 pb-6 fade-in">
+      <img src="assets/picture/profile.jpg" alt="Profile" class="w-36 h-36 rounded-full shadow-lg border-4 border-white object-cover mb-6 mx-auto lazy" loading="lazy">
+      <h1 class="text-4xl md:text-4xl font-extrabold text-blue-700 mb-4">Hi, I'm Stalin Kar</h1>
+      <h2 class="text-4xl md:text-4xl font-extrabold text-blue-800 mb-4 drop-shadow-lg">Senior SDET & Automation Engineer</h1>
+      <p class="text-lg md:text-2xl text-gray-700 mb-8 max-w-2xl mx-auto">UI & API Automation Engineer | Selenium | Playwright | Postman | API Testing (Java | Python | Rest Assured) | Driving Quality & Automation Excellence 🚀</p>
+      <a href="#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-400 text-white font-bold rounded-full shadow-lg cta-animate text-lg hover:scale-105 hover:from-blue-700 hover:to-blue-500 transition-all duration-300">Let's Connect</a>
+      <div class="flex justify-center space-x-6 mt-8">
+        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/stalinkar" target="_blank" class="hover:text-gray-900 transition-colors"><i class="fab fa-github fa-2x"></i></a>
+        <a href="mailto:stalinkar93@gmail.com" class="hover:text-red-500 transition-colors"><i class="fa fa-envelope fa-2x"></i></a>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="mt-10 glass p-6 shadow-lg">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-6">Certifications</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- Card 3 -->
-        <div class="card glass p-5 rounded-lg shadow hover:shadow-xl relative">
-          <h3 class="font-bold text-lg">
-            <a href="https://www.udemy.com/certificate/UC-b1cd7d89-cd8b-46de-aa07-b7328e65a6af/" target="_blank" class="text-blue-600 hover:underline">Selenium Webdriver with Python</a>
-          </h3>
-          <p class="text-gray-600 mt-1">Issued by Udemy</p>
-          <i class="fas fa-award absolute top-4 right-4 text-yellow-500 opacity-70"></i>
+    <main class="max-w-5xl mx-auto px-4 md:px-8">
+      <!-- About Section -->
+      <section id="about" class="mt-16 fade-in">
+        <div class="glass p-8 md:p-12 shadow-xl">
+          <h2 class="text-3xl font-bold text-blue-700 mb-4">About Me</h2>
+          <blockquote class="mb-4">"Behind every seamless user experience is a tester who saw the bug before you did. Software quality is not just about testing—it’s about trust, automation, and enabling speed without compromise."</blockquote>
+          <p class="text-gray-700 leading-relaxed">
+            Hey there! I’m Stalin Kar, a Sr. SDET with nearly a decade of experience in ensuring financial applications are not just functional—but flawless. Whether it’s building robust UI frameworks or automating complex API workflows, I bring precision, performance, and passion to the testing table.<br>
+            Currently at Broadridge Financial Solutions, I specialize in building scalable automation solutions using Selenium, Playwright, Cypress, Java, Python, and Rest Assured. I drive in-sprint automation, maintain expansive regression suites, and build custom tools that simplify testing and data validation. My impact? A 60% reduction in manual effort and a 40% improvement in post-release quality.<br>
+            I’ve worked across fintech and insurance domains, managing QA for mission-critical apps like from asset management to claims processing. I thrive in Agile teams, mentor junior testers, and bridge the gap between dev, QA, and business stakeholders.<br>
+            Beyond the code, I’m an advocate for quality-first culture, agile practices, and mentoring teammates. Whether it's collaborating on test strategy or streamlining test data management, I bring both technical depth and team spirit to the table.<br>
+            What sets me apart? I don’t just run tests—I engineer solutions. I’ve built custom VBA, Java, HTML and JS tools for test data management, improved code quality through Git reviews, and reduced release cycle time by streamlining QA processes.<br>
+            🎯 Career-wise, I’m focused on growing into a QA leadership role where I can drive strategic automation and quality engineering initiatives across global teams.<br>
+            💡 Fun fact: I’m not just about the code—I’m also a lifelong learner. I’m always exploring new tools and techniques to enhance test automation and improve software quality.<br>
+            💬 Let’s connect if you’re passionate about building bug-free, high-quality software—or if you're looking for an SDET who’s ready to transform your testing game.
+          </p>
         </div>
-        <!-- Card 4 -->
-        <div class="card glass p-5 rounded-lg shadow hover:shadow-xl relative">
-          <h3 class="font-bold text-lg">
-            <a href="https://www.udemy.com/certificate/UC-3a164f4e-c6d9-41ae-81c7-2176476fa910/" target="_blank" class="text-blue-600 hover:underline">Rest API Testing(Automation)-Rest Assured Java</a>
-          </h3>
-          <p class="text-gray-600 mt-1">Issued by Udemy</p>
-          <i class="fas fa-award absolute top-4 right-4 text-yellow-500 opacity-70"></i>
-        </div>
-        <!-- Card 1 -->
-        <div class="card glass p-5 rounded-lg shadow hover:shadow-xl relative">
-          <h3 class="font-bold text-lg">
-            <a onclick="openCertModal()" class="text-blue-600 hover:underline cursor-pointer">SDET Professional</a>
-          </h3>
-          <p class="text-gray-600 mt-1">Issued by DevLabs Alliance</p>
-          <i class="fas fa-award absolute top-4 right-4 text-yellow-500 opacity-70"></i>
-        </div>
-        <!-- Card 2 -->
-        <div class="card glass p-5 rounded-lg shadow hover:shadow-xl relative">
-          <h3 class="font-bold text-lg">
-            <a href="https://cutshort.io/certificate/33843" target="_blank" class="text-blue-600 hover:underline">Java - Basic</a>
-          </h3>
-          <p class="text-gray-600 mt-1">Issued by CutShort</p>
-          <i class="fas fa-award absolute top-4 right-4 text-yellow-500 opacity-70"></i>
-        </div>
-        <!-- Card 2 -->
-        <div class="card glass p-5 rounded-lg shadow hover:shadow-xl relative">
-          <h3 class="font-bold text-lg">
-            <a href="https://www.udemy.com/certificate/UC-43cc14eb-9d87-4861-8071-e3176ae9c17f" target="_blank" class="text-blue-600 hover:underline">Playwright Automation - JavaScript</a>
-          </h3>
-          <p class="text-gray-600 mt-1">Issued by Udemy</p>
-          <i class="fas fa-award absolute top-4 right-4 text-yellow-500 opacity-70"></i>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Resume -->
-    <section class="mt-10 glass p-6 shadow-lg">
-      <h2 class="text-2xl font-semibold border-b-2 border-blue-200 pb-2 mb-4">Resume</h2>
-      <button onclick="openModal()" class="px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition-colors">
-        Preview & Download
-      </button>
-    </section>
+      <!-- Services/Features Section -->
+      <section id="services" class="mt-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-purple-600 mb-8 text-center drop-shadow-lg">
+          <i class="fas fa-handshake text-blue-500 mr-2"></i>What I Offer
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="glass card p-6 flex flex-col items-center text-center">
+            <i class="fas fa-robot fa-3x text-blue-500 mb-4"></i>
+            <h3 class="font-bold text-lg mb-2">Automation Frameworks</h3>
+            <p>Designing and implementing robust, scalable UI/API automation frameworks using Selenium, Playwright, Cypress, and more.</p>
+          </div>
+          <div class="glass card p-6 flex flex-col items-center text-center">
+            <i class="fas fa-bug fa-3x text-pink-500 mb-4"></i>
+            <h3 class="font-bold text-lg mb-2">Quality Engineering</h3>
+            <p>Driving in-sprint automation, regression suite maintenance, and quality-first culture for faster, safer releases.</p>
+          </div>
+          <div class="glass card p-6 flex flex-col items-center text-center">
+            <i class="fas fa-tools fa-3x text-green-500 mb-4"></i>
+            <h3 class="font-bold text-lg mb-2">Custom Tools</h3>
+            <p>Building custom utilities for test data management, reporting, and process automation to boost productivity.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Education Section -->
+      <section id="education" class="mt-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-purple-600 mb-8 text-center drop-shadow-lg">
+          <i class="fas fa-graduation-cap text-blue-500 mr-2"></i>Education
+        </h2>
+        <div class="relative max-w-2xl mx-auto"></div>
+          <div class="relative glass card p-8 md:p-10 rounded-3xl shadow-2xl border border-blue-200 bg-gradient-to-br from-white/90 to-blue-50/80">
+            <div class="flex items-center gap-5 mb-4">
+              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-500 to-cyan-400 shadow-lg">
+                <i class="fas fa-university text-white text-3xl"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-xl md:text-2xl text-blue-800 mb-1">Bachelor of Technology (B.Tech)</h3>
+                <span class="block text-base text-gray-700 font-semibold">Electrical and Electronics Engineering (EEE)</span>
+              </div>
+            </div>
+            <div class="mb-2 flex items-center gap-2">
+              <i class="fas fa-school text-cyan-500"></i>
+              <span class="text-gray-700 font-medium">Biju Pattanaik University of Technology (BPUT)</span>
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="text-gray-600 font-medium">CGPA: <span class="font-bold text-blue-700">7.35</span></span>
+            </div>
+            <div class="mt-4 flex items-center gap-3">
+              <span class="inline-block px-4 py-1 bg-gradient-to-r from-blue-500 to-cyan-400 text-white rounded-full text-sm font-semibold shadow">2010 - 2014</span>
+              <span class="inline-block px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-xs font-medium">Odisha, India</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Portfolio/Work Showcase Section -->
+      <section id="portfolio" class="mt-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-purple-600 mb-8 text-center drop-shadow-lg">
+          <i class="fas fa-suitcase text-blue-500 mr-2"></i>Portfolio
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass card p-6 flex flex-col">
+            <h3 class="font-bold text-lg mb-4 flex items-center gap-2 text-blue-700">
+              <i class="fas fa-certificate text-yellow-400"></i> Certifications
+            </h3>
+            <div class="grid grid-cols-1 gap-6">
+              <!-- Certification Card 1 -->
+              <div class="card glass p-5 rounded-2xl shadow-lg hover:shadow-2xl relative group transition-all duration-300 border border-blue-100 hover:border-blue-400 bg-gradient-to-br from-white/80 to-blue-50/60">
+                <div class="flex items-center gap-3 mb-2">
+                  <i class="fas fa-award text-yellow-400 text-2xl drop-shadow"></i>
+                  <h3 class="font-bold text-lg">
+                    <a href="https://www.udemy.com/certificate/UC-b1cd7d89-cd8b-46de-aa07-b7328e65a6af/" target="_blank" class="text-blue-600 hover:underline hover:text-blue-800 transition-colors">Selenium Webdriver with Python</a>
+                  </h3>
+                </div>
+                <p class="text-gray-600 text-sm">Issued by Udemy</p>
+                <div class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-blue-200/30 to-transparent"></div>
+              </div>
+              <!-- Certification Card 2 -->
+              <div class="card glass p-5 rounded-2xl shadow-lg hover:shadow-2xl relative group transition-all duration-300 border border-pink-100 hover:border-pink-400 bg-gradient-to-br from-white/80 to-pink-50/60">
+                <div class="flex items-center gap-3 mb-2">
+                  <i class="fas fa-award text-pink-400 text-2xl drop-shadow"></i>
+                  <h3 class="font-bold text-lg">
+                    <a href="https://www.udemy.com/certificate/UC-3a164f4e-c6d9-41ae-81c7-2176476fa910/" target="_blank" class="text-pink-600 hover:underline hover:text-pink-800 transition-colors">Rest API Testing (Automation) - Rest Assured Java</a>
+                  </h3>
+                </div>
+                <p class="text-gray-600 text-sm">Issued by Udemy</p>
+                <div class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-pink-200/30 to-transparent"></div>
+              </div>
+              <!-- Certification Card 3 -->
+              <div class="card glass p-5 rounded-2xl shadow-lg hover:shadow-2xl relative group transition-all duration-300 border border-green-100 hover:border-green-400 bg-gradient-to-br from-white/80 to-green-50/60">
+                <div class="flex items-center gap-3 mb-2">
+                  <i class="fas fa-award text-green-400 text-2xl drop-shadow"></i>
+                  <h3 class="font-bold text-lg">
+                    <a onclick="openCertModal()" class="text-green-600 hover:underline hover:text-green-800 transition-colors cursor-pointer">SDET Professional</a>
+                  </h3>
+                </div>
+                <p class="text-gray-600 text-sm">Issued by DevLabs Alliance</p>
+                <div class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-green-200/30 to-transparent"></div>
+              </div>
+              <!-- Certification Card 4 -->
+              <div class="card glass p-5 rounded-2xl shadow-lg hover:shadow-2xl relative group transition-all duration-300 border border-cyan-100 hover:border-cyan-400 bg-gradient-to-br from-white/80 to-cyan-50/60">
+                <div class="flex items-center gap-3 mb-2">
+                  <i class="fas fa-award text-cyan-400 text-2xl drop-shadow"></i>
+                  <h3 class="font-bold text-lg">
+                    <a href="https://cutshort.io/certificate/33843" target="_blank" class="text-cyan-600 hover:underline hover:text-cyan-800 transition-colors">Java - Basic</a>
+                  </h3>
+                </div>
+                <p class="text-gray-600 text-sm">Issued by CutShort</p>
+                <div class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-cyan-200/30 to-transparent"></div>
+              </div>
+              <!-- Certification Card 5 -->
+              <div class="card glass p-5 rounded-2xl shadow-lg hover:shadow-2xl relative group transition-all duration-300 border border-purple-100 hover:border-purple-400 bg-gradient-to-br from-white/80 to-purple-50/60">
+                <div class="flex items-center gap-3 mb-2">
+                  <i class="fas fa-award text-purple-400 text-2xl drop-shadow"></i>
+                  <h3 class="font-bold text-lg">
+                    <a href="https://www.udemy.com/certificate/UC-43cc14eb-9d87-4861-8071-e3176ae9c17f" target="_blank" class="text-purple-600 hover:underline hover:text-purple-800 transition-colors">Playwright Automation - JavaScript</a>
+                  </h3>
+                </div>
+                <p class="text-gray-600 text-sm">Issued by Udemy</p>
+                <div class="absolute inset-0 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-purple-200/30 to-transparent"></div>
+              </div>
+            </div>
+          </div>
+          <div class="glass card p-6 flex flex-col">
+            <h2 class="font-bold text-lg mb-4 text-blue-700 flex items-center gap-2">
+              <i class="fas fa-laptop-code text-blue-500"></i> Skills &amp; Experience
+            </h2>
+            <ul class="space-y-4">
+              <li class="flex items-center justify-between bg-gradient-to-r from-blue-100 via-white to-cyan-100 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fab fa-java text-orange-600 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">Selenium WebDriver</span>
+                </div>
+                <span class="text-sm font-medium bg-blue-200 text-blue-700 px-3 py-1 rounded-full shadow">6 Years</span>
+              </li>
+              <li class="flex items-center justify-between bg-gradient-to-r from-purple-100 via-white to-blue-100 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-play text-purple-600 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">Playwright</span>
+                </div>
+                <span class="text-sm font-medium bg-purple-200 text-purple-700 px-3 py-1 rounded-full shadow">3 Years</span>
+              </li>
+              <li class="flex items-center justify-between bg-gradient-to-r from-yellow-100 via-white to-orange-100 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fab fa-java text-yellow-700 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">Java</span>
+                </div>
+                <span class="text-sm font-medium bg-yellow-200 text-yellow-700 px-3 py-1 rounded-full shadow">6 Years</span>
+              </li>
+              <li class="flex items-center justify-between bg-gradient-to-r from-green-100 via-white to-blue-50 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fab fa-python text-green-600 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">Python</span>
+                </div>
+                <span class="text-sm font-medium bg-green-200 text-green-700 px-3 py-1 rounded-full shadow">4 Years</span>
+              </li>
+              <li class="flex items-center justify-between bg-gradient-to-r from-pink-100 via-white to-yellow-100 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fab fa-js-square text-yellow-500 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">JavaScript</span>
+                </div>
+                <span class="text-sm font-medium bg-pink-200 text-pink-700 px-3 py-1 rounded-full shadow">3 Years</span>
+              </li>
+              <li class="flex items-center justify-between bg-gradient-to-r from-cyan-100 via-white to-blue-100 p-4 rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div class="flex items-center gap-3">
+                  <i class="fas fa-network-wired text-cyan-600 text-xl group-hover:scale-125 transition-transform"></i>
+                  <span class="font-semibold text-gray-800">API Testing</span>
+                </div>
+                <span class="text-sm font-medium bg-cyan-200 text-cyan-700 px-3 py-1 rounded-full shadow">4 Years</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-    <!-- Modal -->
+      <!-- Testimonials Section -->
+      <section id="testimonials" class="mt-16 fade-in">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-cyan-500 to-purple-600 mb-8 text-center drop-shadow-lg">
+          <i class="fas fa-book text-blue-500 mr-2"></i>Testimonials
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="glass card p-6 flex flex-col items-center text-center">
+            <i class="fas fa-quote-left fa-2x text-blue-400 mb-2"></i>
+            <p class="italic mb-2">“Stalin’s automation expertise and attention to detail have been instrumental in improving our release quality and speed.”</p>
+            <span class="font-semibold text-blue-700">— Product Owner, Broadridge</span>
+          </div>
+          <div class="glass card p-6 flex flex-col items-center text-center">
+            <i class="fas fa-quote-left fa-2x text-blue-400 mb-2"></i>
+            <p class="italic mb-2">“A true team player and mentor, Stalin always goes the extra mile to ensure project success.”</p>
+            <span class="font-semibold text-blue-700">— QA Lead, Insurance Project (Cognizant)</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="mt-16 fade-in">
+        <div class="glass p-8 md:p-12 shadow-xl">
+          <h2 class="text-3xl font-bold text-blue-700 mb-4">Contact:</h2>
+          <p class="mb-4">Want to collaborate or have a project in mind? Reach out via email or connect on LinkedIn!</p>
+          <div class="flex gap-6 items-center">
+            <a href="mailto:stalinkar93@gmail.com" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2"><i class="fa fa-envelope"></i> stalinkar93@gmail.com</a>
+            <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="text-blue-600 hover:text-blue-800 font-semibold flex items-center gap-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+          <div class="mt-8">
+            <button onclick="openModal()" class="px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition-colors">Preview & Download Resume</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modals (unchanged) -->
     <div id="resumeModal" class="modal none">
       <div class="modal-content">
         <div class="flex justify-between items-center mb-4">
@@ -276,8 +401,6 @@
         </div>
       </div>
     </div>
-
-    <!-- Modal -->
     <div id="certModal" class="modal none">
       <div class="modal-content">
         <div class="flex justify-between items-center mb-4">
@@ -289,30 +412,47 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-10 text-center text-sm text-gray-500">
-      © 2025 Stalin Kar. All rights reserved.
+    <footer class="mt-16 py-8 text-center text-sm text-gray-500">
+      <div class="flex justify-center gap-6 mb-2">
+        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:text-blue-500 transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/stalinkar" target="_blank" class="hover:text-gray-900 transition-colors"><i class="fab fa-github fa-lg"></i></a>
+        <a href="mailto:stalinkar93@gmail.com" class="hover:text-red-500 transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
+      </div>
+      <div>© 2025 Stalin Kar. All rights reserved.</div>
     </footer>
 
-  </div>
-
-  <script>
-    function openCertModal() {
-      document.getElementById('certModal').style.display = 'flex';
-    }
-    function openModal() {
-      document.getElementById('resumeModal').style.display = 'flex';
-    }
-    function closeModal() {
-      document.getElementById('resumeModal').style.display = 'none';
-    }
-    // Close modal on ESC
-    document.addEventListener('keydown', function(e) {
-      if (e.key === "Escape") {
-        document.getElementById('resumeModal').style.display = 'none';
-        document.getElementById('certModal').style.display = 'none';
+    <script>
+      // Modal logic (unchanged)
+      function openCertModal() {
+        document.getElementById('certModal').style.display = 'flex';
       }
-    });
-  </script>
+      function openModal() {
+        document.getElementById('resumeModal').style.display = 'flex';
+      }
+      function closeModal() {
+        document.getElementById('resumeModal').style.display = 'none';
+      }
+      document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+          document.getElementById('resumeModal').style.display = 'none';
+          document.getElementById('certModal').style.display = 'none';
+        }
+      });
 
-</body>
-</html>
+      // Animated scroll effects
+      function animateOnScroll() {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+            }
+          });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+      }
+      window.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+
+  </body>
+  </html>
+  
