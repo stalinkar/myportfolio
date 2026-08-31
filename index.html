@@ -7,6 +7,32 @@
     <meta property="og:title" content="Stalin Kar — Senior SDET & Automation Architect" />
     <meta property="og:description" content="11+ years building test automation that release managers trust. Selenium · Playwright · Cypress · Serenity BDD · Rest Assured." />
     <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/picture/profile.jpg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Stalin Kar",
+        "url": "/",
+        "image": "assets/picture/profile.jpg",
+        "sameAs": [
+          "https://linkedin.com/in/stalin-kar-6a6b18150/",
+          "https://github.com/stalinkar"
+        ],
+        "jobTitle": "Senior SDET & Automation Architect",
+        "description": "Senior SDET & Automation Architect with 11+ years designing Selenium, Playwright, and API test automation frameworks that cut regression time and raise coverage for fintech and insurance platforms.",
+        "email": "mailto:stalinkar93@gmail.com",
+        "knowsAbout": ["Test Automation","Selenium","Playwright","Cypress","Rest Assured","CI/CD"]
+      }
+    </script>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Stalin Kar — Senior SDET & Automation Architect" />
+    <meta name="twitter:description" content="11+ years building test automation that release managers trust. Selenium · Playwright · Cypress · Serenity BDD · Rest Assured." />
+    <meta name="keywords" content="SDET, Test Automation, Selenium, Playwright, Cypress, Rest Assured, Automation Architect, QA Engineer, Fintech QA, Insurance QA" />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="/" />
+    <meta name="theme-color" content="#0A0E16" />
+    <link rel="icon" href="assets/favicon.svg" />
     <title>Stalin Kar — Senior SDET & Automation Architect</title>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
@@ -68,6 +94,17 @@
         margin-bottom: 0.75rem;
       }
       .eyebrow::before { content: '$'; color: var(--text-faint); }
+      .text-muted { color: var(--text-muted); }
+      .text-faint { color: var(--text-faint); }
+      .text-accent { color: var(--accent); }
+      .bg-accent { background: var(--accent); }
+      .text-accent-foreground { color: #06110E; }
+      .text-accent-2 { color: var(--accent-2); }
+      .text-warn { color: var(--warn); }
+      .text-danger { color: var(--danger); }
+      .border-muted { border-color: var(--border); }
+      .bg-panel-2 { background: var(--panel-2); }
+      .border-top { border-top: 1px solid var(--border); }
       .section-title {
         font-size: 1.9rem;
         font-weight: 700;
@@ -111,6 +148,27 @@
         transform: translateY(-6px) scale(1.01);
         border-color: var(--border-hover);
         box-shadow: 0 16px 38px rgba(0,0,0,0.45);
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        position: static;
+        left: 0;
+        top: 0.5rem;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        background: var(--accent);
+        color: #06110E;
+        border-radius: 6px;
+        z-index: 60;
       }
 
       .sticky-nav {
@@ -241,6 +299,7 @@
     </style>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Sticky Navbar -->
     <nav class="sticky-nav flex justify-between items-center px-6 py-3">
@@ -249,11 +308,11 @@
           SK
         </div>
         <div>
-          <span class="font-bold text-lg tracking-wide" style="color: var(--text);">Stalin Kar</span>
-          <p class="text-xs mono" style="color: var(--text-muted);">Senior SDET &amp; Automation Architect</p>
+          <span class="font-bold text-lg tracking-wide">Stalin Kar</span>
+          <p class="text-xs mono text-muted">Senior SDET &amp; Automation Architect</p>
         </div>
       </div>
-      <ul class="hidden lg:flex gap-6 font-medium text-sm" style="color: var(--text-muted);">
+      <ul class="hidden lg:flex gap-6 font-medium text-sm text-muted">
         <li><a href="#hero" class="hover:!text-white transition-colors">Home</a></li>
         <li><a href="#about" class="hover:!text-white transition-colors">About</a></li>
         <li><a href="#experience" class="hover:!text-white transition-colors">Case Studies</a></li>
@@ -270,22 +329,22 @@
           <span class="w-2 h-2 rounded-full" style="background: var(--accent);"></span>
           Open to opportunities
         </div>
-        <button id="navToggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full border transition hover:bg-white/5" style="border-color: var(--border); color: var(--text); background: rgba(255,255,255,0.04);" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+        <button id="navToggle" class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full border border-muted transition hover:bg-white/5" style="background: rgba(255,255,255,0.04);" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
           <i class="fas fa-bars" id="navToggleIcon"></i>
         </button>
       </div>
     </nav>
-    <div id="mobileMenu" class="lg:hidden hidden flex-col px-6 py-4 gap-1 mono text-sm" style="background: var(--bg-alt); border-bottom: 1px solid var(--border);">
-      <a href="#hero" class="nav-mobile-link py-2" style="color: var(--text-muted);">Home</a>
-      <a href="#about" class="nav-mobile-link py-2" style="color: var(--text-muted);">About</a>
-      <a href="#experience" class="nav-mobile-link py-2" style="color: var(--text-muted);">Case Studies</a>
-      <a href="#architecture" class="nav-mobile-link py-2" style="color: var(--text-muted);">Architecture</a>
-      <a href="#process" class="nav-mobile-link py-2" style="color: var(--text-muted);">Process</a>
-      <a href="#services" class="nav-mobile-link py-2" style="color: var(--text-muted);">Services</a>
-      <a href="#projects" class="nav-mobile-link py-2" style="color: var(--text-muted);">Projects</a>
-      <a href="#portfolio" class="nav-mobile-link py-2" style="color: var(--text-muted);">Portfolio</a>
-      <a href="#testimonials" class="nav-mobile-link py-2" style="color: var(--text-muted);">Testimonials</a>
-      <a href="#contact" class="nav-mobile-link py-2" style="color: var(--text-muted);">Contact</a>
+    <div id="mobileMenu" class="lg:hidden hidden flex-col px-6 py-4 gap-1 mono text-sm bg-panel-2 border-muted" style="background: var(--bg-alt); border-bottom: 1px solid var(--border);">
+      <a href="#hero" class="nav-mobile-link py-2 text-muted">Home</a>
+      <a href="#about" class="nav-mobile-link py-2 text-muted">About</a>
+      <a href="#experience" class="nav-mobile-link py-2 text-muted">Case Studies</a>
+      <a href="#architecture" class="nav-mobile-link py-2 text-muted">Architecture</a>
+      <a href="#process" class="nav-mobile-link py-2 text-muted">Process</a>
+      <a href="#services" class="nav-mobile-link py-2 text-muted">Services</a>
+      <a href="#projects" class="nav-mobile-link py-2 text-muted">Projects</a>
+      <a href="#portfolio" class="nav-mobile-link py-2 text-muted">Portfolio</a>
+      <a href="#testimonials" class="nav-mobile-link py-2 text-muted">Testimonials</a>
+      <a href="#contact" class="nav-mobile-link py-2 text-muted">Contact</a>
     </div>
 
     <!-- Hero Section -->
@@ -297,23 +356,23 @@
         <!-- Left: headline -->
         <div>
           <div class="eyebrow">whoami</div>
-          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4" style="color: var(--text);">
-            I build test automation that <span style="color: var(--accent);">release managers trust.</span>
+          <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">
+            I build test automation that <span class="text-accent">release managers trust.</span>
           </h1>
-          <p class="text-base md:text-lg mb-6 max-w-lg" style="color: var(--text-muted);">
+          <p class="text-base md:text-lg mb-6 max-w-lg text-muted">
             Senior SDET / Automation Architect - 11+ years turning fragile release cycles into predictable, evidence-backed ones across UI &amp; API layers. Selenium · Playwright · Cypress · Rest Assured · Serenity BDD · Java · Python · JavaScript/TypeScript.
           </p>
-          <div class="flex items-center gap-2 mb-8 text-sm mono" style="color: var(--text-faint);">
-            <i class="fas fa-location-dot" style="color: var(--accent);"></i><span>Bengaluru, Karnataka, India</span>
+          <div class="flex items-center gap-2 mb-8 text-sm mono text-faint">
+            <i class="fas fa-location-dot text-accent" aria-hidden="true"></i><span>Bengaluru, Karnataka, India</span>
           </div>
           <div class="flex flex-wrap items-center gap-4 mb-10">
-            <a href="#contact" class="hero-cta inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 hover:opacity-90" style="background: var(--accent); color: #06110E;">Let's Connect →</a>
-            <button onclick="openModal()" class="hero-cta-secondary inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 border hover:!border-[var(--accent)]" style="border-color: var(--border); color: var(--text);">View Resume</button>
+            <a href="#contact" class="hero-cta inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 hover:opacity-90 bg-accent text-accent-foreground">Let's Connect →</a>
+            <button onclick="openModal()" class="hero-cta-secondary inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 border border-muted">View Resume</button>
           </div>
-          <div class="flex gap-5" style="color: var(--text-muted);">
-            <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
-            <a href="https://github.com/stalinkar" target="_blank" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-github fa-lg"></i></a>
-            <a href="mailto:stalinkar93@gmail.com" class="hover:!text-[var(--accent)] transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
+          <div class="flex gap-5 text-muted">
+            <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+            <a href="https://github.com/stalinkar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-github fa-lg"></i></a>
+            <a href="mailto:stalinkar93@gmail.com" aria-label="Email" class="hover:!text-[var(--accent)] transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
           </div>
         </div>
 
@@ -323,7 +382,7 @@
             <div class="terminal-dot" style="background:#FB7185;"></div>
             <div class="terminal-dot" style="background:#F5B041;"></div>
             <div class="terminal-dot" style="background:#2DD4BF;"></div>
-            <span class="mono text-xs ml-2" style="color: var(--text-faint);">regression-suite — zsh</span>
+              <span class="mono text-xs ml-2 text-faint">regression-suite — zsh</span>
           </div>
           <div class="terminal-body" id="termBody"></div>
         </div>
@@ -333,19 +392,19 @@
       <div class="max-w-6xl mx-auto w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mt-14">
         <div class="panel p-5 text-center">
           <div class="stat-value text-2xl md:text-3xl" data-target="11" data-suffix="+">0</div>
-          <div class="text-xs mono mt-1" style="color: var(--text-muted);">Years Experience</div>
+          <div class="text-xs mono mt-1 text-muted">Years Experience</div>
         </div>
         <div class="panel p-5 text-center">
           <div class="stat-value text-2xl md:text-3xl" data-target="75" data-suffix="%">0</div>
-          <div class="text-xs mono mt-1" style="color: var(--text-muted);">Automation Coverage</div>
+          <div class="text-xs mono mt-1 text-muted">Automation Coverage</div>
         </div>
         <div class="panel p-5 text-center">
           <div class="stat-value text-2xl md:text-3xl" data-target="80" data-suffix="%">0</div>
-          <div class="text-xs mono mt-1" style="color: var(--text-muted);">Consistent Pass Rate</div>
+          <div class="text-xs mono mt-1 text-muted">Consistent Pass Rate</div>
         </div>
         <div class="panel p-5 text-center">
           <div class="stat-value text-2xl md:text-3xl" data-target="40" data-suffix="%">0</div>
-          <div class="text-xs mono mt-1" style="color: var(--text-muted);">Faster Release Validation</div>
+          <div class="text-xs mono mt-1 text-muted">Faster Release Validation</div>
         </div>
       </div>
     </section>
@@ -357,7 +416,7 @@
         <div class="panel p-8 md:p-12">
           <div class="eyebrow">cat about.md</div>
           <blockquote class="mb-5">"Behind every seamless user experience is a tester who saw the bug before you did. Software quality is not just about testing—it's about trust, automation, and enabling speed without compromise."</blockquote>
-          <p class="leading-relaxed" style="color: var(--text-muted);">
+          <p class="leading-relaxed text-muted">
             I'm Stalin Kar, a Senior SDET / Automation Architect with 11+ years turning fragile, manual-heavy release cycles into fast, evidence-backed ones across fintech and insurance — asset management, transaction gateways, and claims processing. I architect hybrid Selenium/Playwright + Serenity BDD frameworks, mentor teams on automation standards, and measure everything I ship: coverage, pass-rate, and runtime. The four case studies below are the proof, not the pitch.
           </p>
         </div>
@@ -368,7 +427,7 @@
         <div class="section-head">
           <div class="eyebrow" style="justify-content:center;">git log --stat --grep="impact"</div>
           <h2 class="section-title">Case Studies</h2>
-          <p class="text-sm max-w-xl mx-auto mt-2" style="color: var(--text-muted);">Every engagement framed as it actually happened: the problem I inherited, what I built, and the measured before/after.</p>
+          <p class="text-sm max-w-xl mx-auto mt-2 text-muted">Every engagement framed as it actually happened: the problem I inherited, what I built, and the measured before/after.</p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
@@ -377,17 +436,17 @@
           <div class="panel card p-6 md:p-7 flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <span class="tag">Broadridge · Sr. SDET</span>
-              <i class="fas fa-gauge-high" style="color: var(--accent);"></i>
+              <i class="fas fa-gauge-high text-accent" aria-hidden="true"></i>
             </div>
-            <h3 class="font-bold text-lg mb-3" style="color: var(--text);">Cutting Regression Runtime Without Cutting Coverage</h3>
-            <div class="space-y-3 text-sm mb-5" style="color: var(--text-muted);">
-              <p><span class="mono text-xs font-semibold" style="color: var(--danger);">PROBLEM&nbsp;</span> A key module's full regression cycle took 9 hours, blocking fast nightly and PR-gated feedback for engineers.</p>
-              <p><span class="mono text-xs font-semibold" style="color: var(--accent-2);">APPROACH&nbsp;</span> Redesigned Jenkins pipelines for parallel execution, restructured test grouping and resource allocation, and layered gated nightly/PR builds.</p>
+            <h3 class="font-bold text-lg mb-3">Cutting Regression Runtime Without Cutting Coverage</h3>
+            <div class="space-y-3 text-sm mb-5 text-muted">
+              <p><span class="mono text-xs font-semibold text-danger">PROBLEM&nbsp;</span> A key module's full regression cycle took 9 hours, blocking fast nightly and PR-gated feedback for engineers.</p>
+              <p><span class="mono text-xs font-semibold text-accent-2">APPROACH&nbsp;</span> Redesigned Jenkins pipelines for parallel execution, restructured test grouping and resource allocation, and layered gated nightly/PR builds.</p>
             </div>
             <div class="mt-auto">
-              <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>Before · 9h 00m</span><span>100%</span></div>
+              <div class="flex justify-between text-xs mono mb-1 text-faint"><span>Before · 9h 00m</span><span>100%</span></div>
               <div class="metric-bar-track mb-3"><div class="metric-bar-fill" data-fill="100" style="background: linear-gradient(90deg,#3a3f4d,#5a6072);"></div></div>
-              <div class="flex justify-between text-xs mono mb-1" style="color: var(--accent);"><span>After · 6h 45m</span><span>~35% faster</span></div>
+              <div class="flex justify-between text-xs mono mb-1 text-accent"><span>After · 6h 45m</span><span>~35% faster</span></div>
               <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="75"></div></div>
             </div>
           </div>
@@ -396,20 +455,20 @@
           <div class="panel card p-6 md:p-7 flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <span class="tag">Broadridge · Sr. SDET</span>
-              <i class="fas fa-shield-halved" style="color: var(--accent);"></i>
+              <i class="fas fa-shield-halved text-accent" aria-hidden="true"></i>
             </div>
-            <h3 class="font-bold text-lg mb-3" style="color: var(--text);">From Flaky Signal to Trusted Regression Pack</h3>
-            <div class="space-y-3 text-sm mb-5" style="color: var(--text-muted);">
-              <p><span class="mono text-xs font-semibold" style="color: var(--danger);">PROBLEM&nbsp;</span> Automation coverage sat at 60%, and inconsistent wait strategies meant flaky tests eroded trust in the pass/fail signal.</p>
-              <p><span class="mono text-xs font-semibold" style="color: var(--accent-2);">APPROACH&nbsp;</span> Architected hybrid Selenium + Serenity BDD and Playwright + Serenity frameworks (Java/Cucumber), layering data-driven POM patterns with resilient wait/retry strategies.</p>
+            <h3 class="font-bold text-lg mb-3">From Flaky Signal to Trusted Regression Pack</h3>
+            <div class="space-y-3 text-sm mb-5 text-muted">
+              <p><span class="mono text-xs font-semibold text-danger">PROBLEM&nbsp;</span> Automation coverage sat at 60%, and inconsistent wait strategies meant flaky tests eroded trust in the pass/fail signal.</p>
+              <p><span class="mono text-xs font-semibold text-accent-2">APPROACH&nbsp;</span> Architected hybrid Selenium + Serenity BDD and Playwright + Serenity frameworks (Java/Cucumber), layering data-driven POM patterns with resilient wait/retry strategies.</p>
             </div>
             <div class="mt-auto space-y-3">
               <div>
-                <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>Coverage · 60% → 75%</span><span class="stat-value">75%</span></div>
+                <div class="flex justify-between text-xs mono mb-1 text-faint"><span>Coverage · 60% → 75%</span><span class="stat-value">75%</span></div>
                 <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="75"></div></div>
               </div>
               <div>
-                <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>Pass rate · 70% → 80%</span><span class="stat-value">80%</span></div>
+                <div class="flex justify-between text-xs mono mb-1 text-faint"><span>Pass rate · 70% → 80%</span><span class="stat-value">80%</span></div>
                 <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="80"></div></div>
               </div>
             </div>
@@ -419,15 +478,15 @@
           <div class="panel card p-6 md:p-7 flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <span class="tag">Broadridge · Sr. SDET</span>
-              <i class="fas fa-plug" style="color: var(--accent);"></i>
+              <i class="fas fa-plug text-accent" aria-hidden="true"></i>
             </div>
-            <h3 class="font-bold text-lg mb-3" style="color: var(--text);">Unifying API Validation Across Tools</h3>
-            <div class="space-y-3 text-sm mb-5" style="color: var(--text-muted);">
-              <p><span class="mono text-xs font-semibold" style="color: var(--danger);">PROBLEM&nbsp;</span> API validation was split across manual Postman runs and ad-hoc scripts, duplicating effort every release.</p>
-              <p><span class="mono text-xs font-semibold" style="color: var(--accent-2);">APPROACH&nbsp;</span> Built a unified Rest Assured suite integrated into the Selenium regression bed, with lightweight Postman pre-request scripting reserved for edge cases.</p>
+            <h3 class="font-bold text-lg mb-3">Unifying API Validation Across Tools</h3>
+            <div class="space-y-3 text-sm mb-5 text-muted">
+              <p><span class="mono text-xs font-semibold text-danger">PROBLEM&nbsp;</span> API validation was split across manual Postman runs and ad-hoc scripts, duplicating effort every release.</p>
+              <p><span class="mono text-xs font-semibold text-accent-2">APPROACH&nbsp;</span> Built a unified Rest Assured suite integrated into the Selenium regression bed, with lightweight Postman pre-request scripting reserved for edge cases.</p>
             </div>
             <div class="mt-auto">
-              <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>Validation effort</span><span class="stat-value">−50%</span></div>
+              <div class="flex justify-between text-xs mono mb-1 text-faint"><span>Validation effort</span><span class="stat-value">−50%</span></div>
               <div class="metric-bar-track mb-3"><div class="metric-bar-fill" data-fill="100" style="background: linear-gradient(90deg,#3a3f4d,#5a6072);"></div></div>
               <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="50"></div></div>
             </div>
@@ -437,20 +496,20 @@
           <div class="panel card p-6 md:p-7 flex flex-col">
             <div class="flex items-center justify-between mb-4">
               <span class="tag">Cognizant · Associate</span>
-              <i class="fas fa-database" style="color: var(--accent-2);"></i>
+              <i class="fas fa-database text-accent-2" aria-hidden="true"></i>
             </div>
-            <h3 class="font-bold text-lg mb-3" style="color: var(--text);">Stabilizing a Legacy Oracle Test Estate</h3>
-            <div class="space-y-3 text-sm mb-5" style="color: var(--text-muted);">
-              <p><span class="mono text-xs font-semibold" style="color: var(--danger);">PROBLEM&nbsp;</span> Legacy UFT scripts were unstable, and Oracle-driven flows lacked repeatable test data — slowing every SIT/UAT cycle.</p>
-              <p><span class="mono text-xs font-semibold" style="color: var(--accent-2);">APPROACH&nbsp;</span> Migrated critical suites to Selenium WebDriver with TestNG/Cucumber, and replaced manual data prep with SQL-driven data setups.</p>
+            <h3 class="font-bold text-lg mb-3">Stabilizing a Legacy Oracle Test Estate</h3>
+            <div class="space-y-3 text-sm mb-5 text-muted">
+              <p><span class="mono text-xs font-semibold text-danger">PROBLEM&nbsp;</span> Legacy UFT scripts were unstable, and Oracle-driven flows lacked repeatable test data — slowing every SIT/UAT cycle.</p>
+              <p><span class="mono text-xs font-semibold text-accent-2">APPROACH&nbsp;</span> Migrated critical suites to Selenium WebDriver with TestNG/Cucumber, and replaced manual data prep with SQL-driven data setups.</p>
             </div>
             <div class="mt-auto space-y-3">
               <div>
-                <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>New automation coverage</span><span class="stat-value">45%</span></div>
+                <div class="flex justify-between text-xs mono mb-1 text-faint"><span>New automation coverage</span><span class="stat-value">45%</span></div>
                 <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="45" style="background: linear-gradient(90deg, #6d5fbd, var(--accent-2));"></div></div>
               </div>
               <div>
-                <div class="flex justify-between text-xs mono mb-1" style="color: var(--text-faint);"><span>SIT/UAT setup time</span><span class="stat-value">−30%</span></div>
+                <div class="flex justify-between text-xs mono mb-1 text-faint"><span>SIT/UAT setup time</span><span class="stat-value">−30%</span></div>
                 <div class="metric-bar-track"><div class="metric-bar-fill" data-fill="30" style="background: linear-gradient(90deg, #6d5fbd, var(--accent-2));"></div></div>
               </div>
             </div>
@@ -459,9 +518,9 @@
         </div>
 
         <!-- Compact chronological timeline -->
-        <div class="max-w-3xl mx-auto mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-4 sm:gap-8 text-xs mono" style="color: var(--text-faint);">
+        <div class="max-w-3xl mx-auto mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-center gap-4 sm:gap-8 text-xs mono text-faint">
           <div class="flex items-center gap-2"><span class="status-dot"></span>Broadridge Financial Solutions · Sr. Member Technical · May 2021 – Present</div>
-          <div class="hidden sm:block" style="color: var(--text-faint);">→</div>
+          <div class="hidden sm:block text-faint">→</div>
           <div class="flex items-center gap-2"><span class="w-[7px] h-[7px] rounded-full" style="background: var(--accent-2);"></span>Cognizant Technology Solutions · Associate · May 2015 – Apr 2021</div>
         </div>
       </section>
@@ -471,17 +530,17 @@
         <div class="section-head">
           <div class="eyebrow" style="justify-content:center;">cat architecture.yaml</div>
           <h2 class="section-title">Framework Architecture</h2>
-          <p class="text-sm max-w-xl mx-auto mt-2" style="color: var(--text-muted);">This is the stack I actually assemble on a fresh engagement — not a tool inventory, a pipeline. Each layer's output feeds the next.</p>
+          <p class="text-sm max-w-xl mx-auto mt-2 text-muted">This is the stack I actually assemble on a fresh engagement — not a tool inventory, a pipeline. Each layer's output feeds the next.</p>
         </div>
 
         <div class="max-w-3xl mx-auto">
 
           <div class="panel card p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div class="flex items-center gap-3 sm:w-56 shrink-0">
-              <span class="mono text-xs font-bold" style="color: var(--accent);">01</span>
+              <span class="mono text-xs font-bold text-accent">01</span>
               <div>
-                <div class="font-semibold text-sm" style="color: var(--text);">UI Automation</div>
-                <div class="text-xs mono" style="color: var(--text-faint);">drives the browser</div>
+                <div class="font-semibold text-sm">UI Automation</div>
+                <div class="text-xs mono text-faint">drives the browser</div>
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -491,14 +550,14 @@
             </div>
           </div>
 
-          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs" style="color: var(--text-faint);"></i></div>
+          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs text-faint"></i></div>
 
           <div class="panel card p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div class="flex items-center gap-3 sm:w-56 shrink-0">
-              <span class="mono text-xs font-bold" style="color: var(--accent);">02</span>
+              <span class="mono text-xs font-bold text-accent">02</span>
               <div>
-                <div class="font-semibold text-sm" style="color: var(--text);">BDD &amp; Test Design</div>
-                <div class="text-xs mono" style="color: var(--text-faint);">structures the specs</div>
+                <div class="font-semibold text-sm">BDD &amp; Test Design</div>
+                <div class="text-xs mono text-faint">structures the specs</div>
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -510,14 +569,14 @@
             </div>
           </div>
 
-          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs" style="color: var(--text-faint);"></i></div>
+          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs text-faint"></i></div>
 
           <div class="panel card p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div class="flex items-center gap-3 sm:w-56 shrink-0">
-              <span class="mono text-xs font-bold" style="color: var(--accent);">03</span>
+              <span class="mono text-xs font-bold text-accent">03</span>
               <div>
-                <div class="font-semibold text-sm" style="color: var(--text);">API Validation</div>
-                <div class="text-xs mono" style="color: var(--text-faint);">verifies the contract</div>
+                <div class="font-semibold text-sm">API Validation</div>
+                <div class="text-xs mono text-faint">verifies the contract</div>
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -527,14 +586,14 @@
             </div>
           </div>
 
-          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs" style="color: var(--text-faint);"></i></div>
+          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs text-faint"></i></div>
 
           <div class="panel card p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6">
             <div class="flex items-center gap-3 sm:w-56 shrink-0">
-              <span class="mono text-xs font-bold" style="color: var(--accent);">04</span>
+              <span class="mono text-xs font-bold text-accent">04</span>
               <div>
-                <div class="font-semibold text-sm" style="color: var(--text);">CI/CD Orchestration</div>
-                <div class="text-xs mono" style="color: var(--text-faint);">runs it on every push</div>
+                <div class="font-semibold text-sm">CI/CD Orchestration</div>
+                <div class="text-xs mono text-faint">runs it on every push</div>
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -543,14 +602,14 @@
             </div>
           </div>
 
-          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs" style="color: var(--text-faint);"></i></div>
+          <div class="flex justify-center py-1"><i class="fas fa-chevron-down text-xs text-faint"></i></div>
 
           <div class="panel card p-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6" style="border-color: var(--border-hover);">
             <div class="flex items-center gap-3 sm:w-56 shrink-0">
-              <span class="mono text-xs font-bold" style="color: var(--accent);">05</span>
+              <span class="mono text-xs font-bold text-accent">05</span>
               <div>
-                <div class="font-semibold text-sm" style="color: var(--text);">Reporting &amp; Analytics</div>
-                <div class="text-xs mono" style="color: var(--text-faint);">closes the loop</div>
+                <div class="font-semibold text-sm">Reporting &amp; Analytics</div>
+                <div class="text-xs mono text-faint">closes the loop</div>
               </div>
             </div>
             <div class="flex flex-wrap gap-2">
@@ -562,8 +621,8 @@
 
           <!-- Supporting rails -->
           <div class="flex flex-col sm:flex-row gap-3 mt-8">
-            <div class="flex-1 rounded-xl border p-4" style="border-color: var(--border); background: var(--panel-2);">
-              <div class="text-xs mono font-semibold mb-2" style="color: var(--accent-2);">+ TEST DATA &amp; DB</div>
+            <div class="flex-1 rounded-xl border p-4 border-muted bg-panel-2">
+              <div class="text-xs mono font-semibold mb-2 text-accent-2">+ TEST DATA &amp; DB</div>
               <div class="flex flex-wrap gap-2">
                 <span class="tag">MS-SQL Server</span>
                 <span class="tag">Oracle DB</span>
@@ -571,8 +630,8 @@
                 <span class="tag">VBA (Excel macros)</span>
               </div>
             </div>
-            <div class="flex-1 rounded-xl border p-4" style="border-color: var(--border); background: var(--panel-2);">
-              <div class="text-xs mono font-semibold mb-2" style="color: var(--accent-2);">+ TEST MANAGEMENT</div>
+            <div class="flex-1 rounded-xl border p-4 border-muted bg-panel-2">
+              <div class="text-xs mono font-semibold mb-2 text-accent-2">+ TEST MANAGEMENT</div>
               <div class="flex flex-wrap gap-2">
                 <span class="tag">JIRA</span>
                 <span class="tag">Rally</span>
@@ -593,39 +652,39 @@
         </div>
         <div class="grid md:grid-cols-4 gap-5">
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-computer fa-2x mb-4" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Automation Frameworks</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Designing and implementing robust, scalable UI/API automation frameworks using Selenium, Playwright, and more.</p>
+            <i class="fas fa-computer fa-2x mb-4 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Automation Frameworks</h3>
+            <p class="text-sm text-muted">Designing and implementing robust, scalable UI/API automation frameworks using Selenium, Playwright, and more.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-bug fa-2x mb-4" style="color: var(--accent-2);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Quality Engineering</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Driving in-sprint automation, regression suite maintenance, and quality-first culture for faster, safer releases.</p>
+            <i class="fas fa-bug fa-2x mb-4 text-accent-2" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Quality Engineering</h3>
+            <p class="text-sm text-muted">Driving in-sprint automation, regression suite maintenance, and quality-first culture for faster, safer releases.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-tools fa-2x mb-4" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Custom Tools</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Building custom utilities for test data management, reporting, and process automation to boost productivity.</p>
+            <i class="fas fa-tools fa-2x mb-4 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Custom Tools</h3>
+            <p class="text-sm text-muted">Building custom utilities for test data management, reporting, and process automation to boost productivity.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-infinity fa-2x mb-4" style="color: var(--accent-2);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">CI/CD (Jenkins)</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Implementing and maintaining CI/CD pipelines using Jenkins for automated build, test, and deployment.</p>
+            <i class="fas fa-infinity fa-2x mb-4 text-accent-2" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">CI/CD (Jenkins)</h3>
+            <p class="text-sm text-muted">Implementing and maintaining CI/CD pipelines using Jenkins for automated build, test, and deployment.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-database fa-2x mb-4" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Test Data Management</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Designing strategies and tools for efficient test data creation, masking, and management for robust automation.</p>
+            <i class="fas fa-database fa-2x mb-4 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Test Data Management</h3>
+            <p class="text-sm text-muted">Designing strategies and tools for efficient test data creation, masking, and management for robust automation.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-users-cog fa-2x mb-4" style="color: var(--accent-2);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Mentoring &amp; Leadership</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Mentoring junior testers, conducting code reviews, and driving best practices to uplift team capability.</p>
+            <i class="fas fa-users-cog fa-2x mb-4 text-accent-2" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Mentoring &amp; Leadership</h3>
+            <p class="text-sm text-muted">Mentoring junior testers, conducting code reviews, and driving best practices to uplift team capability.</p>
           </div>
           <div class="panel card p-6 flex flex-col items-center text-center">
-            <i class="fas fa-chart-pie fa-2x mb-4" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Test Reporting &amp; Analytics</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Building custom dashboards and integrating reporting tools for actionable insights and trend analysis.</p>
+            <i class="fas fa-chart-pie fa-2x mb-4 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-2">Test Reporting &amp; Analytics</h3>
+            <p class="text-sm text-muted">Building custom dashboards and integrating reporting tools for actionable insights and trend analysis.</p>
           </div>
         </div>
       </section>
@@ -635,60 +694,60 @@
         <div class="section-head">
           <div class="eyebrow" style="justify-content:center;">./engagement.sh --dry-run</div>
           <h2 class="section-title">How I Work</h2>
-          <p class="text-sm max-w-xl mx-auto mt-2" style="color: var(--text-muted);">For teams and clients bringing me in to fix or build automation from the ground up — the same four-stage process every time, so nothing depends on tribal knowledge.</p>
+          <p class="text-sm max-w-xl mx-auto mt-2 text-muted">For teams and clients bringing me in to fix or build automation from the ground up — the same four-stage process every time, so nothing depends on tribal knowledge.</p>
         </div>
 
         <div class="max-w-5xl mx-auto grid md:grid-cols-4 gap-5 relative">
 
           <div class="panel card p-6 relative">
             <div class="hidden md:flex items-center justify-center absolute" style="top: 50%; right: -22px; transform: translateY(-50%); z-index: 5;">
-              <i class="fas fa-chevron-right text-xs" style="color: var(--text-faint);"></i>
+              <i class="fas fa-chevron-right text-xs text-faint"></i>
             </div>
             <div class="flex items-center justify-between mb-4">
-              <span class="mono text-2xl font-bold" style="color: var(--accent);">01</span>
-              <i class="fas fa-magnifying-glass" style="color: var(--text-faint);"></i>
+              <span class="mono text-2xl font-bold text-accent">01</span>
+              <i class="fas fa-magnifying-glass text-faint"></i>
             </div>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Discovery</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Audit current coverage, release cadence, and risk areas. Talk to devs, PMs, and whoever owns the pain of a bad release.</p>
+            <h3 class="font-bold text-base mb-2">Discovery</h3>
+            <p class="text-sm text-muted">Audit current coverage, release cadence, and risk areas. Talk to devs, PMs, and whoever owns the pain of a bad release.</p>
           </div>
 
           <div class="panel card p-6 relative">
-            <div class="hidden md:flex items-center justify-center absolute" style="top: 50%; right: -22px; transform: translateY(-50%); z-index: 5;">
-              <i class="fas fa-chevron-right text-xs" style="color: var(--text-faint);"></i>
+              <div class="hidden md:flex items-center justify-center absolute" style="top: 50%; right: -22px; transform: translateY(-50%); z-index: 5;">
+              <i class="fas fa-chevron-right text-xs text-faint"></i>
             </div>
             <div class="flex items-center justify-between mb-4">
-              <span class="mono text-2xl font-bold" style="color: var(--accent);">02</span>
-              <i class="fas fa-diagram-project" style="color: var(--text-faint);"></i>
+              <span class="mono text-2xl font-bold text-accent">02</span>
+              <i class="fas fa-diagram-project text-faint"></i>
             </div>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Framework Design</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Architect the layered stack — UI, BDD, API, CI, reporting — sized to the team's tech, skill level, and release goals. No one-size-fits-all templates.</p>
+            <h3 class="font-bold text-base mb-2">Framework Design</h3>
+            <p class="text-sm text-muted">Architect the layered stack — UI, BDD, API, CI, reporting — sized to the team's tech, skill level, and release goals. No one-size-fits-all templates.</p>
           </div>
 
           <div class="panel card p-6 relative">
-            <div class="hidden md:flex items-center justify-center absolute" style="top: 50%; right: -22px; transform: translateY(-50%); z-index: 5;">
-              <i class="fas fa-chevron-right text-xs" style="color: var(--text-faint);"></i>
+              <div class="hidden md:flex items-center justify-center absolute" style="top: 50%; right: -22px; transform: translateY(-50%); z-index: 5;">
+              <i class="fas fa-chevron-right text-xs text-faint"></i>
             </div>
             <div class="flex items-center justify-between mb-4">
-              <span class="mono text-2xl font-bold" style="color: var(--accent);">03</span>
-              <i class="fas fa-hammer" style="color: var(--text-faint);"></i>
+              <span class="mono text-2xl font-bold text-accent">03</span>
+              <i class="fas fa-hammer text-faint"></i>
             </div>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Implementation</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Build the suite, stabilize flaky legacy tests, wire it into CI/CD, and set coding standards and MR review checklists.</p>
+            <h3 class="font-bold text-base mb-2">Implementation</h3>
+            <p class="text-sm text-muted">Build the suite, stabilize flaky legacy tests, wire it into CI/CD, and set coding standards and MR review checklists.</p>
           </div>
 
           <div class="panel card p-6 relative" style="border-color: var(--border-hover);">
             <div class="flex items-center justify-between mb-4">
-              <span class="mono text-2xl font-bold" style="color: var(--accent);">04</span>
-              <i class="fas fa-people-arrows" style="color: var(--text-faint);"></i>
+              <span class="mono text-2xl font-bold text-accent">04</span>
+              <i class="fas fa-people-arrows text-faint"></i>
             </div>
-            <h3 class="font-bold text-base mb-2" style="color: var(--text);">Handover &amp; Mentoring</h3>
-            <p class="text-sm" style="color: var(--text-muted);">Document the framework, train the team to extend it themselves, and stay engaged for post-launch tuning — no black boxes left behind.</p>
+            <h3 class="font-bold text-base mb-2">Handover &amp; Mentoring</h3>
+            <p class="text-sm text-muted">Document the framework, train the team to extend it themselves, and stay engaged for post-launch tuning — no black boxes left behind.</p>
           </div>
 
         </div>
 
         <div class="text-center mt-10">
-          <a href="#contact" class="inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 hover:opacity-90" style="background: var(--accent); color: #06110E;">Start a Discovery Call →</a>
+          <a href="#contact" class="inline-block px-7 py-3 font-semibold rounded-lg text-sm transition-all duration-300 hover:opacity-90 bg-accent text-accent-foreground">Start a Discovery Call →</a>
         </div>
       </section>
 
@@ -702,20 +761,20 @@
           <div class="panel card p-8 md:p-10">
             <div class="flex items-center gap-5 mb-5">
               <div class="w-14 h-14 flex items-center justify-center rounded-xl" style="background: rgba(45,212,191,0.1); border: 1px solid var(--border-hover);">
-                <i class="fas fa-university text-xl" style="color: var(--accent);"></i>
+                <i class="fas fa-university text-xl text-accent" aria-hidden="true"></i>
               </div>
               <div>
-                <h3 class="font-bold text-lg md:text-xl" style="color: var(--text);">Bachelor of Technology (B.Tech)</h3>
-                <span class="block text-sm font-medium" style="color: var(--text-muted);">Electrical and Electronics Engineering (EEE)</span>
+                <h3 class="font-bold text-lg md:text-xl">Bachelor of Technology (B.Tech)</h3>
+                <span class="block text-sm font-medium text-muted">Electrical and Electronics Engineering (EEE)</span>
               </div>
             </div>
-            <div class="mb-2 flex items-center gap-2 text-sm" style="color: var(--text-muted);">
-              <i class="fas fa-school" style="color: var(--accent);"></i>
+            <div class="mb-2 flex items-center gap-2 text-sm text-muted">
+              <i class="fas fa-school text-accent" aria-hidden="true"></i>
               <span>Biju Pattanaik University of Technology (BPUT)</span>
             </div>
-            <div class="flex items-center gap-2 mb-4 text-sm" style="color: var(--text-muted);">
-              <i class="fas fa-star" style="color: var(--warn);"></i>
-              <span>CGPA: <span class="mono font-bold" style="color: var(--accent);">7.35</span>/10</span>
+            <div class="flex items-center gap-2 mb-4 text-sm text-muted">
+              <i class="fas fa-star text-warn" aria-hidden="true"></i>
+              <span>CGPA: <span class="mono font-bold text-accent">7.35</span>/10</span>
             </div>
             <div class="flex items-center gap-3">
               <span class="tag">2010 – 2014</span>
@@ -733,22 +792,22 @@
         </div>
         <div class="grid md:grid-cols-3 gap-5">
           <div class="panel card p-6 flex flex-col">
-            <i class="fas fa-hand-holding-dollar fa-lg mb-3" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-1" style="color: var(--text);">Fiduciary Advisory Platform</h3>
+            <i class="fas fa-hand-holding-dollar fa-lg mb-3 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-1">Fiduciary Advisory Platform</h3>
             <span class="tag mb-3 w-fit">2 yrs 10 months</span>
-            <p class="text-sm" style="color: var(--text-muted);">Single-point solution for investment advisors and institutions; owned functional and automation testing, report validation, and cross-system integration checks.</p>
+            <p class="text-sm text-muted">Single-point solution for investment advisors and institutions; owned functional and automation testing, report validation, and cross-system integration checks.</p>
           </div>
           <div class="panel card p-6 flex flex-col">
-            <i class="fas fa-piggy-bank fa-lg mb-3" style="color: var(--accent-2);"></i>
-            <h3 class="font-bold text-base mb-1" style="color: var(--text);">Trust Account Servicing Gateway</h3>
+            <i class="fas fa-piggy-bank fa-lg mb-3 text-accent-2" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-1">Trust Account Servicing Gateway</h3>
             <span class="tag mb-3 w-fit">2 yrs 4 months</span>
-            <p class="text-sm" style="color: var(--text-muted);">Consolidated multiple vendor systems into a single gateway for deposit and case management; owned regression automation and release validation.</p>
+            <p class="text-sm text-muted">Consolidated multiple vendor systems into a single gateway for deposit and case management; owned regression automation and release validation.</p>
           </div>
           <div class="panel card p-6 flex flex-col">
-            <i class="fas fa-file-shield fa-lg mb-3" style="color: var(--accent);"></i>
-            <h3 class="font-bold text-base mb-1" style="color: var(--text);">Group Benefit Insurance</h3>
+            <i class="fas fa-file-shield fa-lg mb-3 text-accent" aria-hidden="true"></i>
+            <h3 class="font-bold text-base mb-1">Group Benefit Insurance</h3>
             <span class="tag mb-3 w-fit">Policy Admin &amp; Claims · ~3 yrs</span>
-            <p class="text-sm" style="color: var(--text-muted);">Tested business-critical web and Oracle applications for quoting, policy administration, and claims processing; executed end-to-end automation for key flows.</p>
+            <p class="text-sm text-muted">Tested business-critical web and Oracle applications for quoting, policy administration, and claims processing; executed end-to-end automation for key flows.</p>
           </div>
         </div>
       </section>
@@ -761,72 +820,72 @@
         </div>
         <div class="max-w-4xl mx-auto">
           <div class="panel p-6 flex flex-col">
-            <h3 class="font-bold text-base mb-4 flex items-center gap-2" style="color: var(--text);">
-              <i class="fas fa-certificate" style="color: var(--warn);"></i> Certifications
+            <h3 class="font-bold text-base mb-4 flex items-center gap-2">
+              <i class="fas fa-certificate text-warn" aria-hidden="true"></i> Certifications
             </h3>
             <div class="grid md:grid-cols-2 gap-3">
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <a href="https://www.udemy.com/certificate/UC-b1cd7d89-cd8b-46de-aa07-b7328e65a6af/" target="_blank" class="font-semibold text-sm hover:underline" style="color: var(--text);">Selenium Webdriver with Python</a>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <a href="https://www.udemy.com/certificate/UC-b1cd7d89-cd8b-46de-aa07-b7328e65a6af/" target="_blank" class="font-semibold text-sm hover:underline">Selenium Webdriver with Python</a>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Udemy</p>
+                <p class="text-xs mt-1 mono text-faint">Udemy</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <a href="https://www.udemy.com/certificate/UC-3a164f4e-c6d9-41ae-81c7-2176476fa910/" target="_blank" class="font-semibold text-sm hover:underline" style="color: var(--text);">Rest API Testing (Automation) – Rest Assured Java</a>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <a href="https://www.udemy.com/certificate/UC-3a164f4e-c6d9-41ae-81c7-2176476fa910/" target="_blank" class="font-semibold text-sm hover:underline">Rest API Testing (Automation) – Rest Assured Java</a>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Udemy</p>
+                <p class="text-xs mt-1 mono text-faint">Udemy</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <a onclick="openCertModal()" class="font-semibold text-sm hover:underline cursor-pointer" style="color: var(--text);">SDET Professional</a>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <a onclick="openCertModal()" class="font-semibold text-sm hover:underline cursor-pointer">SDET Professional</a>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">DevLabs Alliance</p>
+                <p class="text-xs mt-1 mono text-faint">DevLabs Alliance</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <a href="https://cutshort.io/certificate/33843" target="_blank" class="font-semibold text-sm hover:underline" style="color: var(--text);">Java – Basic</a>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <a href="https://cutshort.io/certificate/33843" target="_blank" class="font-semibold text-sm hover:underline">Java – Basic</a>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">CutShort</p>
+                <p class="text-xs mt-1 mono text-faint">CutShort</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <a href="https://www.udemy.com/certificate/UC-43cc14eb-9d87-4861-8071-e3176ae9c17f" target="_blank" class="font-semibold text-sm hover:underline" style="color: var(--text);">Playwright Automation – JavaScript</a>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <a href="https://www.udemy.com/certificate/UC-43cc14eb-9d87-4861-8071-e3176ae9c17f" target="_blank" class="font-semibold text-sm hover:underline">Playwright Automation – JavaScript</a>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Udemy</p>
+                <p class="text-xs mt-1 mono text-faint">Udemy</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <span class="font-semibold text-sm" style="color: var(--text);">Effective UI Test Automation With Serenity BDD And Selenium</span>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <span class="font-semibold text-sm">Effective UI Test Automation With Serenity BDD And Selenium</span>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">LinkedIn Learning</p>
+                <p class="text-xs mt-1 mono text-faint">LinkedIn Learning</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <span class="font-semibold text-sm" style="color: var(--text);">Learn JMeter from Scratch – Performance Testing</span>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <span class="font-semibold text-sm">Learn JMeter from Scratch – Performance Testing</span>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Udemy</p>
+                <p class="text-xs mt-1 mono text-faint">Udemy</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <span class="font-semibold text-sm" style="color: var(--text);">MasterClass Software Testing with Jira &amp; Agile</span>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <span class="font-semibold text-sm">MasterClass Software Testing with Jira &amp; Agile</span>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Udemy</p>
+                <p class="text-xs mt-1 mono text-faint">Udemy</p>
               </div>
-              <div class="card p-4 rounded-xl border" style="border-color: var(--border); background: var(--panel-2);">
+              <div class="card p-4 rounded-xl border border-muted bg-panel-2">
                 <div class="flex items-center gap-3">
-                  <i class="fas fa-award" style="color: var(--warn);"></i>
-                  <span class="font-semibold text-sm" style="color: var(--text);">Generative AI for Beginners</span>
+                  <i class="fas fa-award text-warn" aria-hidden="true"></i>
+                  <span class="font-semibold text-sm">Generative AI for Beginners</span>
                 </div>
-                <p class="text-xs mt-1 mono" style="color: var(--text-faint);">Microsoft / LinkedIn Learning</p>
+                <p class="text-xs mt-1 mono text-faint">Microsoft / LinkedIn Learning</p>
               </div>
             </div>
           </div>
@@ -841,14 +900,14 @@
         </div>
         <div class="grid md:grid-cols-2 gap-6">
           <div class="panel card p-6 flex flex-col">
-            <i class="fas fa-quote-left mb-3" style="color: var(--accent);"></i>
-            <p class="italic mb-3 text-sm" style="color: var(--text-muted);">"Stalin's automation expertise and attention to detail have been instrumental in improving our release quality and speed."</p>
-            <span class="font-semibold text-sm" style="color: var(--text);">— Product Owner, Broadridge</span>
+            <i class="fas fa-quote-left mb-3 text-accent" aria-hidden="true"></i>
+            <p class="italic mb-3 text-sm text-muted">"Stalin's automation expertise and attention to detail have been instrumental in improving our release quality and speed."</p>
+            <span class="font-semibold text-sm">— Product Owner, Broadridge</span>
           </div>
           <div class="panel card p-6 flex flex-col">
-            <i class="fas fa-quote-left mb-3" style="color: var(--accent-2);"></i>
-            <p class="italic mb-3 text-sm" style="color: var(--text-muted);">"A true team player and mentor, Stalin always goes the extra mile to ensure project success."</p>
-            <span class="font-semibold text-sm" style="color: var(--text);">— QA Lead, Insurance Project (Cognizant)</span>
+            <i class="fas fa-quote-left mb-3 text-accent-2" aria-hidden="true"></i>
+            <p class="italic mb-3 text-sm text-muted">"A true team player and mentor, Stalin always goes the extra mile to ensure project success."</p>
+            <span class="font-semibold text-sm">— QA Lead, Insurance Project (Cognizant)</span>
           </div>
         </div>
       </section>
@@ -858,18 +917,18 @@
         <div class="panel p-8 md:p-12">
           <div class="eyebrow">./contact.sh</div>
           <h2 class="section-title" style="margin-bottom:0.75rem;">Let's talk</h2>
-          <p class="mb-6" style="color: var(--text-muted);">Want to collaborate or have a project in mind? Reach out via email or connect on LinkedIn!</p>
+          <p class="mb-6 text-muted">Want to collaborate or have a project in mind? Reach out via email or connect on LinkedIn!</p>
           <div class="flex flex-col md:flex-row gap-4 items-start mb-8">
-            <a href="mailto:stalinkar93@gmail.com" class="card flex items-center gap-2 px-4 py-3 rounded-xl border" style="border-color: var(--border); background: var(--panel-2); color: var(--text);">
-              <i class="fa fa-envelope" style="color: var(--accent);"></i>
+            <a href="mailto:stalinkar93@gmail.com" aria-label="Email" class="card flex items-center gap-2 px-4 py-3 rounded-xl border border-muted bg-panel-2">
+              <i class="fa fa-envelope text-accent" aria-hidden="true"></i>
               <span class="font-medium text-sm">stalinkar93@gmail.com</span>
             </a>
-            <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="card flex items-center gap-2 px-4 py-3 rounded-xl border" style="border-color: var(--border); background: var(--panel-2); color: var(--text);">
-              <i class="fab fa-linkedin" style="color: var(--accent);"></i>
+            <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="card flex items-center gap-2 px-4 py-3 rounded-xl border border-muted bg-panel-2" target="_blank">
+              <i class="fab fa-linkedin text-accent" aria-hidden="true"></i>
               <span class="font-medium text-sm">LinkedIn</span>
             </a>
           </div>
-          <button onclick="openModal()" class="px-6 py-3 font-semibold rounded-lg text-sm" style="background: var(--accent); color: #06110E;">Preview &amp; Download Resume</button>
+          <button onclick="openModal()" class="px-6 py-3 font-semibold rounded-lg text-sm bg-accent text-accent-foreground">Preview &amp; Download Resume</button>
         </div>
       </section>
     </main>
@@ -877,23 +936,23 @@
     <!-- Resume Modal -->
     <div id="resumeModal" class="modal">
       <div class="modal-content relative overflow-hidden">
-        <div class="absolute top-0 left-0 w-full h-1" style="background: var(--accent);"></div>
+        <div class="absolute top-0 left-0 w-full h-1 bg-accent"></div>
         <div class="flex justify-between items-center mb-4 pt-2">
           <div class="flex items-center gap-3">
-            <i class="fas fa-file-alt" style="color: var(--accent);"></i>
-            <h2 class="text-xl font-bold" style="color: var(--text);">My Resume</h2>
+            <i class="fas fa-file-alt text-accent" aria-hidden="true"></i>
+            <h2 class="text-xl font-bold">My Resume</h2>
           </div>
-          <button onclick="closeModal()" class="font-bold text-2xl rounded-full w-9 h-9 flex items-center justify-center" style="color: var(--danger);" aria-label="Close">&times;</button>
+          <button onclick="closeModal()" class="font-bold text-2xl rounded-full w-9 h-9 flex items-center justify-center text-danger" aria-label="Close">&times;</button>
         </div>
-        <div class="rounded-xl overflow-hidden border" style="border-color: var(--border);">
+        <div class="rounded-xl overflow-hidden border border-muted">
           <iframe src="assets/resume/Stalin Kar_Resume.pdf" class="w-full h-96 md:h-[32rem] border-0" title="Resume Preview"></iframe>
         </div>
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-6">
-          <span class="text-sm flex items-center gap-2" style="color: var(--text-muted);">
-            <i class="fas fa-eye" style="color: var(--accent);"></i>
+          <span class="text-sm flex items-center gap-2 text-muted">
+            <i class="fas fa-eye text-accent" aria-hidden="true"></i>
             Preview only. For best quality, download below.
           </span>
-          <a href="assets/resume/Stalin Kar_Resume.pdf" download class="inline-flex items-center gap-2 px-5 py-2 font-semibold rounded-full text-sm" style="background: var(--accent); color: #06110E;">
+          <a href="assets/resume/Stalin Kar_Resume.pdf" download class="inline-flex items-center gap-2 px-5 py-2 font-semibold rounded-full text-sm bg-accent text-accent-foreground"> 
             <i class="fas fa-download"></i> Download Resume
           </a>
         </div>
@@ -906,17 +965,17 @@
         <div class="absolute top-0 left-0 w-full h-1" style="background: var(--warn);"></div>
         <div class="flex justify-between items-center mb-4 pt-2">
           <div class="flex items-center gap-3">
-            <i class="fas fa-certificate" style="color: var(--warn);"></i>
-            <h2 class="text-xl font-bold" style="color: var(--text);">SDET Professional Certificate</h2>
+            <i class="fas fa-certificate text-warn" aria-hidden="true"></i>
+            <h2 class="text-xl font-bold">SDET Professional Certificate</h2>
           </div>
-          <button onclick="document.getElementById('certModal').style.display = 'none'" class="font-bold text-2xl rounded-full w-9 h-9 flex items-center justify-center" style="color: var(--danger);" aria-label="Close">&times;</button>
+          <button onclick="document.getElementById('certModal').style.display = 'none'" class="font-bold text-2xl rounded-full w-9 h-9 flex items-center justify-center text-danger" aria-label="Close">&times;</button>
         </div>
-        <div class="rounded-xl overflow-hidden border" style="border-color: var(--border);">
+        <div class="rounded-xl overflow-hidden border border-muted">
           <iframe src="assets/cert/Stalin_Kar_SDET.pdf" class="w-full h-96 md:h-[32rem] border-0" title="Certificate Preview"></iframe>
         </div>
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 mt-6">
-          <span class="text-sm flex items-center gap-2" style="color: var(--text-muted);">
-            <i class="fas fa-eye" style="color: var(--warn);"></i>
+          <span class="text-sm flex items-center gap-2 text-muted">
+            <i class="fas fa-eye text-warn" aria-hidden="true"></i>
             Preview only. For best quality, download below.
           </span>
           <a href="assets/cert/Stalin_Kar_SDET.pdf" download class="inline-flex items-center gap-2 px-5 py-2 font-semibold rounded-full text-sm" style="background: var(--warn); color: #06110E;">
@@ -927,14 +986,21 @@
     </div>
 
     <!-- Footer -->
-    <footer class="mt-20 py-10 text-center text-sm" style="color: var(--text-faint); border-top: 1px solid var(--border);">
+    <footer class="mt-20 py-10 text-center text-sm text-faint border-top">
       <div class="flex justify-center gap-6 mb-3 mt-8">
-        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
-        <a href="https://github.com/stalinkar" target="_blank" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-github fa-lg"></i></a>
-        <a href="mailto:stalinkar93@gmail.com" class="hover:!text-[var(--accent)] transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
+        <a href="https://linkedin.com/in/stalin-kar-6a6b18150/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-linkedin fa-lg"></i></a>
+        <a href="https://github.com/stalinkar" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="hover:!text-[var(--accent)] transition-colors"><i class="fab fa-github fa-lg"></i></a>
+        <a href="mailto:stalinkar93@gmail.com" aria-label="Email" class="hover:!text-[var(--accent)] transition-colors"><i class="fa fa-envelope fa-lg"></i></a>
       </div>
       <div class="mono text-xs">© 2026 Stalin Kar · All rights reserved.</div>
     </footer>
+
+    <script>
+      // Accessibility: mark icon elements decorative by default
+      document.addEventListener('DOMContentLoaded', function(){
+        document.querySelectorAll('i').forEach(function(ic){ ic.setAttribute('aria-hidden','true'); });
+      });
+    </script>
 
     <script>
       // Modal logic
